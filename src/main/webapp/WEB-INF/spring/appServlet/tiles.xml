@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+<!--     <definition name="base.definition" template="/WEB-INF/views/layout.jsp">
+        <put-attribute name="header" value="/WEB-INF/views/header.jsp"/>
+        <put-attribute name="content" value=""/>
+    </definition> -->
+
+	<definition name="base.definition" template="/WEB-INF/views/default.jsp">
+		<put-attribute name="title-content" value="" />
+		<put-attribute name="navbar-content" value="/WEB-INF/views/navbar.jsp" />
+		<put-attribute name="custom-css" value=""/>
+		<put-attribute name="main-content" value="" />
+		<put-attribute name="footer-content" value="/WEB-INF/views/footer.jsp" />
+		<put-attribute name="modal-content" value="" />		
+		<put-attribute name="custom-js" value=""/>
+	</definition>
+
+	<definition name="home" extends="base.definition">
+		<put-attribute name="main-content" value="/WEB-INF/views/home.jsp" />
+	</definition>
+	
+
+		<definition name="user" extends="base.definition">
+		<put-attribute name="title-content" value="Accounts" />
+		<put-attribute name="custom-css" value="/WEB-INF/views/accounts_css.jsp"/>
+		<put-attribute name="main-content" value="/WEB-INF/views/accounts.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/accounts_js.jsp"/>
+		<put-attribute name="modal-content" value="/WEB-INF/views/modal.jsp" />
+	</definition>
+	
+
+
+		<definition name="about" extends="base.definition">
+		<put-attribute name="title-content" value="We are the best?" />
+		<put-attribute name="custom-css" value="/WEB-INF/views/about_css.jsp"/>
+		<put-attribute name="main-content" value="/WEB-INF/views/about.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/about_js.jsp"/>
+	</definition>
+
+
+<!--     <definition name="search" extends="base.definition">
+        <put-attribute name="content" value="/WEB-INF/jsp/search/search.jsp"/>
+    </definition>
+
+
+    <definition name="product-new" extends="base.definition">
+        <put-attribute name="title" value="new product" />
+        <put-attribute name="content" value="/WEB-INF/jsp/product/new.jsp"/>
+    </definition> -->
+
+
+<!--     <definition name="login" extends="base.definition">
+        <put-attribute name="content" value="/WEB-INF/views/login.jsp"/>
+    </definition> -->
+
+	<definition name="login" template="/WEB-INF/views/login.jsp">
+	</definition>
+<!-- 	<definition name="home" template="/WEB-INF/views/home.jsp">
+	</definition> -->
+<!-- 	<definition name="user" template="/WEB-INF/views/user.jsp">9
+	</definition> -->
+	<definition name="adduser" extends="base.definition">
+	<put-attribute name="title-content" value="New Account" />
+	<put-attribute name="main-content" value="/WEB-INF/views/account_create.jsp" />
+	<put-attribute name="custom-js" value="/WEB-INF/views/account_create_js.jsp" />
+	</definition>
+	
+	<definition name="updateuser" extends="base.definition">
+	<put-attribute name="title-content" value="Update Account" />
+	<put-attribute name="main-content" value="/WEB-INF/views/account_update.jsp" />
+	<put-attribute name="custom-js" value="/WEB-INF/views/account_update_js.jsp" />
+	</definition>
+
+	<definition name="book" extends="base.definition">
+	<put-attribute name="title-content" value="Book Now" />
+	<put-attribute name="custom-css" value="/WEB-INF/views/book_css.jsp"/>
+	<put-attribute name="main-content" value="/WEB-INF/views/book.jsp" />
+	<put-attribute name="custom-js" value="/WEB-INF/views/book_js.jsp" />
+	</definition>
+	
+	<definition name="schedule" extends="base.definition">
+		<put-attribute name="title-content" value="Schedule" />
+		<put-attribute name="custom-css" value="/WEB-INF/views/schedule_css.jsp"/>
+		<put-attribute name="main-content" value="/WEB-INF/views/schedule.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/schedule_js.jsp"/>
+		<put-attribute name="modal-content" value="/WEB-INF/views/modal.jsp" />
+	</definition>
+	
+	<definition name="addschedule" extends="base.definition">
+	<put-attribute name="title-content" value="New Schedule" />
+	<put-attribute name="main-content" value="/WEB-INF/views/schedule_create.jsp" />
+	<put-attribute name="custom-js" value="/WEB-INF/views/schedule_create_js.jsp" />
+	</definition>
+			
+	<definition name="usersavailability" extends="base.definition">
+		<put-attribute name="title-content" value="Availability" />
+		<put-attribute name="custom-css" value="/WEB-INF/views/schedule_css.jsp"/>
+		<put-attribute name="main-content" value="/WEB-INF/views/usersavailability.jsp" />
+		<put-attribute name="custom-js" value="/WEB-INF/views/schedule_js.jsp"/>
+		<put-attribute name="modal-content" value="/WEB-INF/views/modal.jsp" />
+	</definition>
+	
+	<definition name="accountavailable" extends="base.definition">
+	<put-attribute name="title-content" value="Availability" />
+	<put-attribute name="custom-css" value="/WEB-INF/views/account_available_css.jsp"/>
+	<put-attribute name="main-content" value="/WEB-INF/views/account_available.jsp" />
+	<put-attribute name="custom-js" value="/WEB-INF/views/account_available_js.jsp" />
+	</definition>
+</tiles-definitions>
